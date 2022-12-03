@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительные решения</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body background="{% static 'main/img/fonnew.jpg' %}">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-xxl">
+              <a link class="navbar-brand" href="{% url 'index' %}">Строительные решения</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a link class="nav-link" href="{% url 'houses' %}">Дома</a>
+                  </li>
+                  <li class="nav-item">
+                    <a link class="nav-link" href="{% url 'bani' %}">Бани</a> <!--Сделала так чтобы при нажатии в навбаре кнопку Бани у меня переходило на отдельно созданную страницу про Бани -->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'otdelochnye_raboty' %}">Отделочные работы</a>
+                  </li>
+                  <li class="nav-item">
+                    <p class="nav-link88">Наш номер  8-800-00-00-00</p>
+                  </li>
+                    </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+<div class="container3">
+    <div class="row row-cols-2">
+      <div class="col">
+        <a href="dom iz penoblocka.html"><img src="https://stroy-montag.org/wp-content/uploads/2021/03/dom_penblock.jpg" width="500" height="350" alt="Баня бочка" title="Дом из пеноблоков"></a><!--здесь сделала картинку ссылкой -->
+        <p class="card-text3">Дом из пеноблоков — это экономный способ создания безопасного и комфортного загородного жилья.В последние годы в России возросло количество загородных частных домов и коттеджей, которые возводят из пеноблоков.
+          Даже крупные строительные компании используют пенобетон при строительстве жилых и коммерческих зданий.</p>
+      </div>
+      <div class="col">
+        <img src="http://almode.ru/uploads/posts/2021-05/1622105478_35-p-dom-iz-brusa-38.jpg" width="500" height="350" alt="Баня из бруса" title="Дом из бруса">
+        <p class="card-text3"> Дом из бруса – это жилое здание или капитальное строение иного назначения, возведенное, преимущественно, из цельного или клееного бруса, пиломатериалов натуральной древесины разных пород.
+           Деревянный строительный брус— это, разновидность пиломатериалов изготовленных из цельных бревен и или клееных деревянных досок, толщина и ширина которого от 100 мм и более.</p>
+      </div>
+      <div class="col">
+        <img src="http://almode.ru/uploads/posts/2021-05/1622212006_64-p-dom-iz-kirpicha-69.jpg" width="500" height="350" alt="Баня из кирпича" title="Дом из кирпича">
+        <p class="card-text3">Считается, что кирпич — самый лучший материал для строительства, так как он экологически чистый, прочный. Он сохраняет тепло зимой и не нагревается летом.
+          Перепады погоды, атмосферные явления никак не влияют на прочность этого материала. </p>
+      </div>
+      <div class="col">
+        <img src="http://almode.ru/uploads/posts/2021-04/1618684712_61-p-karkasnii-dom-66.jpg" width="500" height="350" alt="Баня из пеноблоков" title="Каркасный дом">
+        <p class="card-text3">Каркасный дом — быстровозводимая конструкция, в которой все несущие элементы связаны между собой.
+          По этой технологии строились и продолжают возводиться не только частные дома, но и трёх-, и четырёхэтажные большие многофункциональные здания. </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

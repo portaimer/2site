@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительные решение </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body background="{% static 'main/img/fonnew.jpg' %}">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-xxl">
+              <a link class="navbar-brand" href="{% url 'index' %}">Строительные решения</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a link class="nav-link" href="{% url 'houses' %}">Дома</a>
+                  </li>
+                  <li class="nav-item">
+                    <a link class="nav-link" href="{% url 'bani' %}">Бани</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'otdelochnye_raboty' %}">Отделочные работы</a>
+                  </li>
+                  <li class="nav-item">
+                    <p class="nav-link88">Наш номер  8-800-00-00-00</p>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+    </header>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact-form">
+            <div class="contact-image">
+                <img src="{% static 'main/img/123.jpg' %}" alt="Строительные решения"/>
+            </div>
+            <form class="form-contact contact_form" action="" method="post" novalidate="novalidate">
+                {% csrf_token %}
+                <h3>Отправьте нам сообщение</h3>
+               <div class="row">
+                    <div class="col-md-6">
+                        {% if form.name.errors %}
+                            <div class="alert alert-damage">
+                                <strong>{{ form.name.errors }}
+                                </strong>
+                        {% endif %}
+                            </div>
+                        <div class="form-group">
+                            {{ form.name }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group">
+                           {{ form.fone }}
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Отправить сообщение" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        {% if form.massage.errors %}
+                            <div class="alert alert-damage">
+                                <strong>{{ form.massage.errors }}
+                                </strong>
+                        {% endif %}
+                            </div>
+                        <div class="form-group">
+                            {{ form.massage }}
+                        </div>
+                    </div>
+                </div>
+            </form>
+</div>
+</body>
+</html>

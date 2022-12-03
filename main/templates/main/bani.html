@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительные решения</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body background="{% static 'main/img/fonnew.jpg' %}">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-xxl">
+              <a class="navbar-brand" href="{% url 'index' %}">Строительные решения</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'houses' %}">Дома</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'bani' %}">Бани</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'otdelochnye_raboty' %}">Отделочные работы</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Поиск решения" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Поиск</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+<div class="container3">
+    <div class="row row-cols-2">
+      <div class="col">
+        <img src="https://bany-samara.ru/img/new-1.jpg" width="500" height="350" alt="Баня бочка" title="Баня бочка">
+        <p class="card-text3">Баня-бочка – это сооружение нестационарного типа, состоящее из составных модулей. Площадь ее размещения не превышает 6 метров.
+            При внешней компактности это полноценный банный комплекс с тремя необходимыми секциями: раздевалка, парная и помещение для купания.
+             Наиболее популярной является трехсекционная 5-метровая баня, в которой комфортно разместятся 6 человек.</p>
+      </div>
+      <div class="col">
+        <img src="https://russian-remont.ru/wp-content/uploads/stroitelstvo-bani-iz-brusa-4-2048x1178-1.jpg" width="500" height="350" alt="Баня из бруса" title="Баня из бруса">
+        <p class="card-text3">  Строительство бани из бруса под ключ — востребованная услуга среди владельцев загородных домов и дачных участков.
+            Материал, используемый для возведения сруба, позволяет воссоздать уникальный микроклимат в бане, обеспечивающий отличные расслабляющий и терапевтический эффекты.</p>
+      </div>
+      <div class="col">
+        <img src="https://kirpichspec.ru/wp-content/uploads/2017/09/Kakie-plyusy-i-minusy-imeet-banya-iz-kirpicha-2.jpg" width="500" height="350" alt="Баня из кирпича" title="Баня из кирпича">
+        <p class="card-text3">Баня из кирпича — возможность вписать строение в экстерьер двора загородного дома. Материал не уступает срубу при правильном утеплении и гидроизоляции поверхностей.</p>
+      </div>
+      <div class="col">
+        <img src="https://podvesnoe.ru/wp-content/uploads/2/d/8/2d8dbac9ef7ade392d86ac91ca81498c.jpeg" width="500" height="350" alt="Баня из пеноблоков" title="Баня из пеноблоков">
+        <p class="card-text3">Построить небольшую баню из пеноблоков может практически любой человек. В силу своего легкого веса, в то же время довольно крупного размера выложить стены из пеноблоков не займет много времени.
+            Соблюдая всю технологию постройки, время, которое будет на нее затрачено, займет около полумесяца, при этом строение будет качественным и обладать долговечностью.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
